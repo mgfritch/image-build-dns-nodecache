@@ -28,3 +28,8 @@
 # github.com/DataDog/dd-trace-go/v2: CVE-2026-50274 (HIGH) — improper parsing of W3C baggage headers may lead to DoS.
 # Drop once upstream node-cache requires github.com/DataDog/dd-trace-go/v2 >= v2.8.1.
 -replace github.com/DataDog/dd-trace-go/v2=github.com/DataDog/dd-trace-go/v2@v2.8.1
+
+# golang.org/x/mod: CVE-2026-56864 (malicious GOSUMDB serving arbitrary module content),
+# CVE-2026-56865 (sumdb/tlog transparency log tile verification bypass) — HIGH.
+# Drop once upstream requires golang.org/x/mod >= v0.40.0.
+-replace golang.org/x/mod=golang.org/x/mod@v0.40.0
